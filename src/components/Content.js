@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
-import { ReduxContext } from './redux/ReduxContext';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { LANGUAGES } from '../behavior/languages';
+import { connect } from 'react-redux';
 
-const Content = () => {
-  const reduxContext = useContext(ReduxContext);
-  const { languageId } = reduxContext.appState;
+const Content = ({ languageId }) => {
   let text = '';
 
   switch (languageId) {
@@ -21,4 +20,8 @@ const Content = () => {
   return <p>{text}</p>;
 };
 
-export default Content;
+Content.propTypes = {
+  languageId: PropTypes.string.isRequired,
+};
+
+export default connect(({ languageId }) => ({ languageId }))(Content);

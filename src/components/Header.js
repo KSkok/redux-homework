@@ -1,19 +1,14 @@
-import React, { useContext, useState } from 'react';
-import { ReduxContext } from './redux/ReduxContext';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { setLanguage } from '../behavior/actions';
 import { LANGUAGES } from '../behavior/languages';
+import { connect } from 'react-redux';
 
-const Header = () => {
-  const reduxContext = useContext(ReduxContext);
-  const {
-    appState: { languageId: stateLanguageId },
-    dispatch,
-  } = reduxContext;
-
+const Header = ({ languageId: stateLanguageId, setLanguage }) => {
   const [languageId, setLanguageId] = useState(stateLanguageId);
   const handleChange = e => {
     setLanguageId(e.target.value);
-    dispatch(setLanguage(e.target.value));
+    setLanguage(e.target.value);
   };
 
   return (
@@ -27,4 +22,9 @@ const Header = () => {
   );
 };
 
-export default Header;
+Header.propTypes = {
+  languageId: PropTypes.string.isRequired,
+  setLanguage: PropTypes.func.isRequired,
+};
+
+export default connect(({ languageId }) => ({ languageId }), { setLanguage })(Header);
