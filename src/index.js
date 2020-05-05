@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import { createStore } from "redux";
 import { devToolsEnhancer } from "redux-devtools-extension";
 import rootReducer from "./behavior/reducer";
-import ReduxProvider from "./components/ReduxProvider";
+import ReduxProvider from "./components/redux/ReduxProvider";
 
 const store = createStore(rootReducer, devToolsEnhancer());
 

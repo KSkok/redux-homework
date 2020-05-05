@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ReduxContext } from "../context/ReduxContext";
+import { ReduxContext } from "./redux/ReduxContext";
 import { newLanguageId } from "../behavior/actions";
 import { LANGUAGES } from "../constants/languages";
 
