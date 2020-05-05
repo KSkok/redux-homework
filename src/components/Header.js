@@ -1,25 +1,25 @@
 import React, { useContext, useState } from 'react';
 import { ReduxContext } from './redux/ReduxContext';
-import { newLanguageId } from '../behavior/actions';
+import { setLanguage } from '../behavior/actions';
 import { LANGUAGES } from '../behavior/languages';
 
 const Header = () => {
   const reduxContext = useContext(ReduxContext);
   const {
-    appState: { languageId },
+    appState: { languageId: stateLanguageId },
     dispatch,
   } = reduxContext;
 
-  const [language, setLanguage] = useState(languageId);
+  const [languageId, setLanguageId] = useState(stateLanguageId);
   const handleChange = e => {
-    setLanguage(e.target.value);
-    dispatch(newLanguageId(e.target.value));
+    setLanguageId(e.target.value);
+    dispatch(setLanguage(e.target.value));
   };
 
   return (
     <>
       <label htmlFor="language">Language: </label>
-      <select id="language" value={language} onChange={handleChange}>
+      <select id="language" value={languageId} onChange={handleChange}>
         <option value={LANGUAGES.EN}>EN</option>
         <option value={LANGUAGES.UA}>UA</option>
       </select>
