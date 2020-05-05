@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ReduxContext } from "./redux/ReduxContext";
 import { newLanguageId } from "../behavior/actions";
-import { LANGUAGES } from "../constants/languages";
+import { LANGUAGES } from "../behavior/languages";
 
 const Header = () => {
   const reduxContext = useContext(ReduxContext);

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ReduxContext } from "./redux/ReduxContext";
-import { LANGUAGES } from "../constants/languages";
+import { LANGUAGES } from "../behavior/languages";
 
 const Content = () => {
   const reduxContext = useContext(ReduxContext);

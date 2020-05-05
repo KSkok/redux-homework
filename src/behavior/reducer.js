@@ -1,5 +1,5 @@
 import { LANGUAGE_CHANGED } from "./actions";
-import { LANGUAGES } from "../constants/languages";
+import { LANGUAGES } from "./languages";
 
 const initialState = {
   languageId: LANGUAGES.EN,
