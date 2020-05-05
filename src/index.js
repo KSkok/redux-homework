@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import { createStore } from "redux";
-import { devToolsEnhancer } from "redux-devtools-extension";
-import rootReducer from "./behavior/reducer";
-import ReduxProvider from "./components/redux/ReduxProvider";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import { createStore } from 'redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
+import rootReducer from './behavior/reducer';
+import ReduxProvider from './components/redux/ReduxProvider';
 
 const store = createStore(rootReducer, devToolsEnhancer());
 
@@ -16,7 +16,7 @@ ReactDOM.render(
       <App />
     </ReduxProvider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change

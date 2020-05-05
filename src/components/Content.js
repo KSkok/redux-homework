@@ -1,18 +1,18 @@
-import React, { useContext } from "react";
-import { ReduxContext } from "./redux/ReduxContext";
-import { LANGUAGES } from "../behavior/languages";
+import React, { useContext } from 'react';
+import { ReduxContext } from './redux/ReduxContext';
+import { LANGUAGES } from '../behavior/languages';
 
 const Content = () => {
   const reduxContext = useContext(ReduxContext);
   const { languageId } = reduxContext.appState;
-  let text = "";
+  let text = '';
 
   switch (languageId) {
     case LANGUAGES.EN:
-      text = "Hello, world!";
+      text = 'Hello, world!';
       break;
     case LANGUAGES.UA:
-      text = "Привіт, світ!";
+      text = 'Привіт, світ!';
       break;
     default:
       break;

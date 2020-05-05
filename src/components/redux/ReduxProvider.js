@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { ReduxContext } from "./ReduxContext";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { ReduxContext } from './ReduxContext';
 
 export default function ReduxProvider({ store, children }) {
   const [appState, setAppState] = useState(store.getState());
@@ -15,3 +16,8 @@ export default function ReduxProvider({ store, children }) {
     </ReduxContext.Provider>
   );
 }
+
+ReduxProvider.propTypes = {
+  store: PropTypes.shape().isRequired,
+  children: PropTypes.node.isRequired,
+};

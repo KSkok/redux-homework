@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
-import { ReduxContext } from "./redux/ReduxContext";
-import { newLanguageId } from "../behavior/actions";
-import { LANGUAGES } from "../behavior/languages";
+import React, { useContext, useState } from 'react';
+import { ReduxContext } from './redux/ReduxContext';
+import { newLanguageId } from '../behavior/actions';
+import { LANGUAGES } from '../behavior/languages';
 
 const Header = () => {
   const reduxContext = useContext(ReduxContext);
@@ -11,7 +11,7 @@ const Header = () => {
   } = reduxContext;
 
   const [language, setLanguage] = useState(languageId);
-  const handleChange = (e) => {
+  const handleChange = e => {
     setLanguage(e.target.value);
     dispatch(newLanguageId(e.target.value));
   };

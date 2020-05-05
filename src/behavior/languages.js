@@ -1,4 +1,4 @@
 export const LANGUAGES = {
-  EN: "en",
-  UA: "ua",
+  EN: 'en',
+  UA: 'ua',
 };
