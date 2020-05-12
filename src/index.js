@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { devToolsEnhancer } from 'redux-devtools-extension';
-import rootReducer from './behavior/reducer';
+import { rootReducer } from './behavior';
 import { Provider } from 'react-redux';
 
 const store = createStore(rootReducer, devToolsEnhancer());

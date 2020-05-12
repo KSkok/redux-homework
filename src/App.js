@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import Content from './components/Content';
+import SanaTextsLoader from './components/SanaTextsLoader';
+import Page from './components/Page';
 
 function App() {
   return (
     <>
       <Header />
-      <Content />
+      <SanaTextsLoader />
+      <Page />
     </>
   );
 }

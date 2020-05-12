@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  display: inline-flex;
+}
+
+.block {
+  padding-right: 10px;
+}
+
+#root {
+  padding: 10px;
+}
+
+.input-feedback {
+  color: red;
+}
+
+input.error {
+  border-color: red;
+}
