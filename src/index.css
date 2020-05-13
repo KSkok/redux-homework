@@ -31,3 +31,20 @@ header {
 input.error {
   border-color: red;
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+}
+
+table {
+  margin-top: 20px;
+}
+
+.submitButton {
+  margin-top: 10px;
+}

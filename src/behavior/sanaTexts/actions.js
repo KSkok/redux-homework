@@ -5,3 +5,11 @@ export const receiveSanaTexts = texts => ({
     texts,
   },
 });
+
+export const CHANGE_SANA_TEXT = 'CHANGE_SANA_TEXT';
+export const changeSanaText = text => ({
+  type: CHANGE_SANA_TEXT,
+  payload: {
+    text,
+  },
+});

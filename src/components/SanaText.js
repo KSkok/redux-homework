@@ -11,11 +11,13 @@ SanaText.propTypes = {
   value: PropTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ sanaTexts: { texts } }, { textKey }) => {
-  const text = texts.find(t => t.key === textKey);
+const mapStateToProps = ({ sanaTexts: { texts }, localization: { languageId } }, { textKey }) => {
+  const allTexts = texts.find(t => t.languageId === languageId);
   let value = '';
-  if (text != null)
+  if (allTexts != null) {
+    const text = allTexts.translations.find(t => t.key === textKey);
     value = text.value;
+  }
   return { value };
 };
 

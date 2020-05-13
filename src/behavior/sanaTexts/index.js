@@ -1,1 +1,1 @@
-export { receiveSanaTexts } from './actions';
+export { receiveSanaTexts, changeSanaText } from './actions';
